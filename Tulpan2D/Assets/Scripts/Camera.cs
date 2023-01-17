@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Test : MonoBehaviour
+public class Camera : MonoBehaviour
 {
+    public GameObject Ancor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +13,6 @@ public class Test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        gameObject.transform.position = new Vector3(Ancor.transform.position.x,Ancor.transform.position.y);
     }
 }
