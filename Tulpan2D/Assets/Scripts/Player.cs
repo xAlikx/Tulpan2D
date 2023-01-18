@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
 
     private void CheckGrounded()
     {
-        isGrounded = Physics2D.OverlapCircleAll(transform.position, 0.3f).Length > 1;
+        isGrounded = Physics2D.OverlapCircleAll(transform.position, 0.7f).Length > 1;
     }
     
     private enum AnimationState
