@@ -11,7 +11,8 @@ public class Player : MonoBehaviour
     private Vector2 movement;
     private bool turnRight = true;
     private bool isGrounded;
-    
+    private CharacterAttributes attributes;
+
     void Start()
     {
     }
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour
     {
         CheckGrounded();
         Move();
+        Attack();
     }
 
 
@@ -82,6 +84,21 @@ public class Player : MonoBehaviour
         WalkRight = 2,
         WalkLeft = 3,
         JumpRight = 4,
-        JumpLeft = 5
+        JumpLeft = 5,
+        AttackRight,
+        AttackLeft
+    }
+    
+    private void Attack()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            if (movement.x > 0)
+                animator.SetInteger("State", (int)AnimationState.AttackRight);
+            else if (movement.x < 0)
+                animator.SetInteger("State", (int)AnimationState.AttackLeft);
+            
+            attributes.Stamina.ReduceFromAction(CharacterAction.Attack);
+        }
     }
 }

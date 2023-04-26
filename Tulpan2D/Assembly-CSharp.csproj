@@ -42,7 +42,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AttributeConfiguration.cs" />
+    <Compile Include="Assets\Scripts\AttributeValue.cs" />
     <Compile Include="Assets\Scripts\Camera.cs" />
+    <Compile Include="Assets\Scripts\CharacterAction.cs" />
+    <Compile Include="Assets\Scripts\CharacterAttributes.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Folder Include="Assets" />
     <Folder Include="Assets\Sprites" />
